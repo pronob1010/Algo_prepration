@@ -41,8 +41,6 @@ class dublyLinkedList():
         print(self.end.next.val)
 
 
-
-
     def __str__(self):
         list = []
         node = self.start
