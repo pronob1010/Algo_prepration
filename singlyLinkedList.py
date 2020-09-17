@@ -23,6 +23,7 @@ class SinglyLinkedList():
         while node.next is not None:
             previous_node = node
             node = node.next
+            #jjkdfhasd
         previous_node.next = None
 
     def rev_list(self):
