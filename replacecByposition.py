@@ -46,28 +46,34 @@ class dublyLinkedList():
         temp2 = None
         current = self.start
         while current is not None:
-            pos += 1
             if pos is pos1:
                 temp1 = current
+                temp1prev = temp1.prev
+                temp1next = temp1.next
+                print(temp1prev,"-",temp1.val,"-",temp1next.val)
 
             if pos is pos2:
                 temp2 = current
+                temp2prev = temp2.prev
+                temp2next = temp2.next
+                print(temp2prev.val, "-", temp2.val, "-", temp2next.val)
+
+            pos += 1
             current = current.next
-
-
 
 
         current2 = self.start
         while current2 is not None:
             if posc is pos1:
-                print("temp2 ", temp2.val)
+                current2.next = temp2next
                 current2.val = temp2.val
-                print("cr ", current2.val)
+                current2.prev = temp2prev
+
 
             if posc is pos2:
-                print("temp1 ", temp1.val)
+                current2.next = temp1next
                 current2.val = temp1.val
-                print("cr ", current2.val)
+                current2.prev = temp1prev
 
             posc += 1
             current2 = current2.next
@@ -94,9 +100,10 @@ print(mylist)
 print("total element : ", mylist.count)
 
 # pos1, pos2 = list(map(int, input("Enter 2 position that you want to replace : ").split()))
-# print(pos1)
-# print(pos2)
 pos1 =1
-pos2 =2
+pos2 =3
+print("pos1 ",pos1)
+print("pos2 ",pos2)
+
 mylist.replaceByPosition(pos1,pos2)
 print(mylist)
