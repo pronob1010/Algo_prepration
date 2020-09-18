@@ -3,7 +3,7 @@ for i in range(n):
     stick,diamonds = list(map(int, input().split()))
 
     def result(min,max):
-        if max > (2*min):
+        if max >= (2*min):
             print(min)
         else:
             print((min + max)//3)
