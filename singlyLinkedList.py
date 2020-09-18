@@ -61,5 +61,5 @@ print(mylist)
 mylist.rev_list()
 print(mylist)
 
-
-
+a, b = list(map(int, input().split()))
+print(a + b)
