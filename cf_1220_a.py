@@ -5,6 +5,8 @@ st = input()
 for i in range(n):
     a_list.append(st[i])
 
+#frequencie counting
+
 frequencies = {}
 for item in a_list:
     if item in frequencies:
@@ -22,6 +24,7 @@ e_count = frequencies.get('e')
 
 try:
     r = min(o_count,n_count,e_count)
+
     u_o = (frequencies.get('o') - r)
     u_n = (frequencies.get('n') - r)
     u_e = (frequencies.get('e') - r)
@@ -31,7 +34,7 @@ try:
     frequencies.update({'e': u_e})
 
     for _ in range(r):
-        print('1 ',end =" ")
+        print('1 ',end ="")
 except:
     pass
 
@@ -43,7 +46,8 @@ o_count = frequencies.get('o')
 
 try:
     s = min(z_count,e_count,r_count,o_count)
+
     for _ in range(s):
-        print('0 ',end =" ")
+        print('0 ',end ="")
 except:
     pass
