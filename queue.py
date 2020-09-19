@@ -25,8 +25,8 @@ class doublylinkedlist():
     def pop(self):
         if self.head is not None:
             poped_element = self.head.value
-            newlast = self.head.next
-            self.head = newlast
+            newfirst = self.head.next
+            self.head = newfirst
             self.count -=1
             print("Poped element : ",poped_element)
 
