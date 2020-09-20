@@ -9,3 +9,4 @@ for i in range(len(el)):
             mx.append(el[i]*el[j])
 
 print(max(mx))
+
