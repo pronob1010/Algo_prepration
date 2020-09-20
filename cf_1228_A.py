@@ -26,5 +26,3 @@ if len(l) > 0:
 else:
     print('-1')
 
-
-
