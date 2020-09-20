@@ -6,7 +6,6 @@ for i in range(n):
     a_list.append(st[i])
 
 #frequencie counting
-
 frequencies = {}
 for item in a_list:
     if item in frequencies:
