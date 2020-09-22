@@ -6,7 +6,6 @@ for i in range(1,len(s)):
     if s[i-1]<s[i]:
         sb += 1
     else:
-
         c.append(sb)
         sb = 0
     c.append(sb)
