@@ -3,7 +3,7 @@ ch = []
 for i in range(a):
     c = list(map(str,input().split()))[:b]
     for i in c:
-        if i == 'W' or i == 'Y' or i == 'B':
+        if i == 'W' or i == 'G' or i == 'B':
             ch.append(i)
 
 if len(ch) == a*b:
