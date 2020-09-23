@@ -7,10 +7,8 @@ def repeated_digit(n):
         if d in a:
             # return 0 if the number has repeated digit
             return 0
-
         a.append(d)
         n = n // 10
-
     # return 1 if the number has no repeated digit
     return 1
 

@@ -11,6 +11,7 @@ while True:
     if r > c or p>c :
         print("No")
         break
+
     p = a + i * b
     r = a + i * b + 1
     i+=1

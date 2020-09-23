@@ -6,7 +6,6 @@ class Solution:
                 fre[i] += 1
             else:
                 fre[i] = 1
-
         return min(fre, key= lambda x: fre[x])
 
 
