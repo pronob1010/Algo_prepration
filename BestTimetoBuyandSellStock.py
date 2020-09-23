@@ -5,4 +5,5 @@ for i in range(1,len(List)):
         buy = min((List[i], List[i-1]))
     if List[i]>List[i-1]:
         pro += List[i]-buy
+
 print(pro)
