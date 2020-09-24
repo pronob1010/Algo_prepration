@@ -20,6 +20,7 @@ def sss(x):
         return l
     else:
         return 0
+
 x = 1534236469
 print(sss(x))
 
