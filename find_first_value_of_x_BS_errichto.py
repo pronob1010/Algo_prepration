@@ -5,7 +5,6 @@ first = 0
 last = len(a)-1
 
 while(first<=last):
-
     mid = first + (last-first)//2
 
     if a[mid]>=x:
