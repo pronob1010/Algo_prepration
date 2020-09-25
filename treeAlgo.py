@@ -8,23 +8,46 @@ class BinarySearchTree():
     def __init__(self, root):
         self.root = Node(root)
 
-    def PreOrderView(self, start, string):
+    def PreOrderView(self, start,string):
         if start:
-            string += (str(start.value) + "-")
-            string = self.PreOrderView(start.left, string)
-            string = self.PreOrderView(start.right, string)
+            string += (str(start.value) + "->")
+            # string = start.value
+            #             # print(string)
+            string = self.PreOrderView(start.left,string)
+            string = self.PreOrderView(start.right,string)
+
+        return string
+
+    def PostOrderView(self, start,string):
+        if start:
+            string += (str(start.value) + "->")
+            # string = start.value
+            # print(string)
+            string = self.PreOrderView(start.right,string)
+            string = self.PreOrderView(start.left,string)
+
+        return string
+
+    def InOrderView(self, start,string):
+        if start:
+            string = self.InOrderView(start.left,string)
+            string += (str(start.value) + "->")
+            # string = start.value
+            # print(string)
+            string = self.InOrderView(start.right,string)
 
         return string
 
 
-tree = BinarySearchTree.root(0)
-tree.left = Node(1)
-tree.right = Node(2)
-tree.left.left = Node(3)
-tree.left.right = Node(5)
-tree.right.left = Node(4)
-tree.right.right = Node(5)
+tree = BinarySearchTree(1)
+tree.root.left = Node(2)
+tree.root.right = Node(3)
+tree.root.left.left = Node(4)
+tree.root.left.right = Node(5)
+tree.root.right.left = Node(6)
+tree.root.right.right = Node(7)
+tree.root.right.right = Node(9)
 
-print(tree.PreOrderView(tree.root, " "))
-print(tree.PreOrderView(tree.left, " "))
-print(tree.PreOrderView(tree.right, " "))
+print("Pre-Order View:",tree.PreOrderView(tree.root, " "))#[" " this  is for set a string, we can a make a print function to optimize this ]
+print("Post-Order View:",tree.PostOrderView(tree.root, " "))
+print("In-Order View:",tree.InOrderView(tree.root, " "))
