@@ -94,7 +94,8 @@ class singlyLinkedList():
             prev.next = node
             node.next = current
         # node.next = prev.next.next
-        #problem acheeeeeeeeeeeeeeeeeeeeeeeeee
+        #problem solved
+
 
 
     def display(self):
