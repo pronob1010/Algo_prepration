@@ -8,4 +8,5 @@ for i in s:
     if r-me>= me:
         me+=i
         c += 1
+
 print(c)
