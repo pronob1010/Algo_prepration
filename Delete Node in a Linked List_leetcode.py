@@ -96,6 +96,32 @@ class singlyLinkedList():
         # node.next = prev.next.next
         #problem solved
 
+    def delLastNode(self):
+        current = self.head
+
+        while(current.next is not None):
+            previous = current
+            current = current.next
+        previous.next = None
+        del(current)
+
+    def deletefirstNode(self):
+        head = self.head
+        self.head = head.next
+        del(head)
+
+    def deleteByPosition(self,pos):
+        current = self.head
+        position  = 0
+        previous = current
+        while current is not None:
+            if position == pos:
+                previous.next = current.next
+                del(current)
+                break
+            position+=1
+            previous = current
+            current = current.next
 
 
     def display(self):
@@ -113,6 +139,19 @@ mylist.addNode(4)
 mylist.addNode(5)
 mylist.insertIntoHeadNode(6)
 mylist.display()
-print("--")
+
+print("\nInsert by Position")
 mylist.insertByPosition(7, 1)
+mylist.display()
+
+print("\nDelete last Node :")
+mylist.delLastNode()
+mylist.display()
+
+print("\nDelete First Node :")
+mylist.deletefirstNode()
+mylist.display()
+
+print("\nDelete by Position")
+mylist.deleteByPosition(2)
 mylist.display()
