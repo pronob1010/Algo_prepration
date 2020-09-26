@@ -1,17 +1,11 @@
 n = int(input())
 s = list(map(int, input().split()))[:n]
-
-se = {}
+me = 0
+c = 0
+s.sort()
+r = sum(s)
 for i in s:
-    if i in se:
-        se[i] += 1
-    else:
-        se[i] = 1
-
-print(se.values())
-if len(s)>1:
-    r = [int(i) for i in se.values() if(i == 2)]
-    print(sum(r))
-else:
-    print('1')
-
+    if r-me>= me:
+        me+=i
+        c += 1
+print(c)
