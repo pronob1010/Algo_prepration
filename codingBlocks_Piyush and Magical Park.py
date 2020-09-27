@@ -24,6 +24,7 @@
 #     print("No")
 
 
+
 n, m , k, s = list(map(int, input().split()))
 f = 0
 
