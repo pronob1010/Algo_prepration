@@ -9,5 +9,4 @@ while(z>0):
     z = (n // pr)
     r += z
     i+=1
-
 print(r)
