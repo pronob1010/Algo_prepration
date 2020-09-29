@@ -17,11 +17,11 @@
 #     else:
 #         print('0', end="")
 
-m =input()
+m = input()
 print(type(m))
 print(type(int(m)))
-#
-# if m %2 == 0:
-#     print("Yes")
-# else:
-#     print("NO")
+
+if int(m)%2 == 0:
+    print("Yes")
+else:
+    print("NO")
