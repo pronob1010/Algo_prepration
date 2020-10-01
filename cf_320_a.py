@@ -1,4 +1,34 @@
 n = int(input())
+li = []
+nl1 = []
+while(n!=0):
+    li.append(n%10)
+    n//=10
+li.reverse()
+f = 0
+# nl1.append(li[0])
+t = li[0]
+if li[0] == 1:
+    for i in range(1,len(li)-1):
+        print(li[i])
+        if li[i]!=t:
+            t = li[i]
+            f = 1
+        elif t==1:
+            continue
+        else:
+            f = 0
+            break
+else:
+    f = 0
+
+if f == 1:
+    print("YES")
+else:
+    print("NO")
+
+
+
 # f = 0
 # temp = []
 # temp.append(n % 10)
