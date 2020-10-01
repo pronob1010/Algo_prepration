@@ -1,19 +1,20 @@
 n = input()
 f = 1
 i=0
-while(i<len(n)):
-    if n[i] == '1':
-        i += 1
-
-    elif n[i-1]=='1' and n[i] == '4':
-        i+=2
-
-    elif n[i] == '1' and n[i+1]=='4' and n[i+2] == '4':
-        i+=3
-
-    else:
-        f = 0
-        break
+x =len(n)
+while(i<x):
+    if x>= 3:
+        if n[i] == '1' and n[i + 1] == '4' and n[i + 2] == '4':
+            i += 3
+    if x >= 2:
+        if n[i]=='1' and n[i+1] == '4':
+            i+=2
+    if x >= 1:
+        if n[i] == '1':
+            i += 1
+        else:
+            f = 0
+            break
 
 if f == 1:
     print("YES")
