@@ -1,18 +1,19 @@
 a,b = list(map(int, input().split()))
 
-i = 0
+d = 0
 while True:
-	if i%2 == 1:
-		if a!= 0:
-			a-=i
+	if d%2==1:
+		if a>0 and b>0:
+			a -=d
 		else:
-			print("Valera")
 			break
 	else:
-		if b!= 0:
-			b-=i
+		if b>0 and a>0:
+			b-=d
 		else:
-			print("Vladik")
 			break
-
-	i+=1
+	if a == 0:
+		print("Valera")
+	if b == 0:
+		print("Vladik")
+	d+=1
