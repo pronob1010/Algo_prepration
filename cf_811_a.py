@@ -12,14 +12,12 @@ while True:
 			b-=d
 		else:
 			break
-	print(a,b)
 	d+=1
 
-if a>= d+1:
-	print("Vladik")
-elif b>= d+1:
-
+if a>= d:
 	print("Valera")
+elif b>=d:
+	print("Vladik")
 elif a == 0:
 	print("Valera")
 elif b == 0:
