@@ -1,8 +1,8 @@
-# Python3 program to solve fractional 
-# Knapsack Problem 
+# Python3 program to solve
+# fractional Knapsack Problem
+
 class ItemValue:
     """Item Value DataClass"""
-
     def __init__(self, wt, val, ind):
         self.wt = wt
         self.val = val
