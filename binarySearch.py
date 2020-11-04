@@ -2,7 +2,7 @@ def binarySearch(list,f):
     start = 0
     end = len(list)-1
     while(start<=end):
-        mid = (start + end) // 2
+        mid = (start + (end-start) // 2)
 
         if list[mid] is f:
             return f
