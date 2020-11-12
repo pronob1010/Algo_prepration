@@ -24,6 +24,9 @@ def primefactor(x):
     fact = []
     i = 0
     f = 0
+    t = x
+
+
     while(i<len(p)):
         if (p[i]<=x):
         # print("y")
@@ -37,6 +40,8 @@ def primefactor(x):
             i = 0
             f = 0
 
+    if x != 1:
+        fact.append(t)
     return fact
 
 if __name__=="__main__":
