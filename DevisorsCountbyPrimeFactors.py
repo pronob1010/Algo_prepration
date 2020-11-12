@@ -55,4 +55,5 @@ if __name__=="__main__":
     c = 1
     for i in f.values():
         c*=i+1
+    #we can optimaze this loop
     print(c)
