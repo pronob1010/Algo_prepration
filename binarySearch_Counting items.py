@@ -1,3 +1,6 @@
+#there has an error
+#have to solve it first
+
 def binarySearch_low(list, n):
     first = 0
     last = len(list)-1
@@ -37,6 +40,11 @@ def binarySearch_upper(list, n):
     return r
 
 if __name__ == '__main__':
-    list = [1,1,2,3,3,3,4,5,6 ,7,8,9,9]
+    list = [1,1,2,3,3,3,4,5,6,7,8,9,9,9,9,9,10]
+    print(len(list))
     fi = int(input("Find this number :"))
-    print(binarySearch_upper(list,fi)-binarySearch_low(list,fi)+1)
+    x = binarySearch_upper(list,fi)
+    y = binarySearch_low(list,fi)
+    pos = (x-y+1)
+    print(x , y)
+    print(pos)

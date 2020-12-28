@@ -25,7 +25,7 @@ def findTriplate(li):
         return False
 
 if __name__=='__main__':
-    li = [-3, 2, 1, 7, 9]
+    li = [-3, 3, 1, 7,90,0, -90]
     # x = int(input())
     if findTriplate(li):
         print("\nYes")

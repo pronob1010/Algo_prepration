@@ -21,5 +21,6 @@ def subset(list):
     index = 0
     subsetsUtil(list,subsets,index)
 
-list = ['a','b','c']
+s = input()
+list = [s[i] for i in range(len(s))]
 subset(list)
