@@ -8,6 +8,7 @@ def binarySearch(list):
     while(first<=last):
         mid = (first + (last-first)//2)
 
+        #confused ?
         prev = (mid+N-1)% N #this use to prevent index error
         next = (mid+1)% N #this use to prevent index error
 
