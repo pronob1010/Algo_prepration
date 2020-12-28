@@ -20,7 +20,7 @@ def binarySearch(list):
         elif list[last] > list[mid]:
             last = mid-1
 if __name__ == '__main__':
-    list = [12, 15, 11]
+    list = [12,13,14,15,6,7,8,9,10,11]
     x = binarySearch(list)
     if x == None:
         print(0)
