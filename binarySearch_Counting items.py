@@ -1,4 +1,4 @@
-
+#tested! ok
 def binarySearch_low(list, n):
     first = 0
     last = len(list)-1
