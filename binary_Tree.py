@@ -19,16 +19,18 @@ class Node:
                     self.right.insert(value)
 
     def search(self, value):
-        if self.item:
-            if value < self.item:
-                self.left.search(value)
-
+        f = 0
+        if self.item != None:
+            if value == self.item:
+                print("%d is Found"%(self.item))
+                f = 1
+            elif value < self.item:
+                if self.left != None:
+                    self.left.search(value)
             elif value > self.item:
-                self.right.search(value)
-
-            else:
-                print(self.item)
-                print("Found")
+                if self.right != None:
+                    self.right.search(value)
+        return f
 
     def printTree(self):
         if self.left:
@@ -44,4 +46,6 @@ root.insert(14)
 root.insert(5)
 
 root.printTree()
-root.search(5)
+x = root.search(15)
+if x == 0:
+    print("Not Found")
