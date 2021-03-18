@@ -211,17 +211,98 @@
 # for key, value in fre.items():
 #         print("%d %d"%(key, value))
 
-from datetime import datetime
-n = int(input())
-li = {}
-for i in range(n):
-    Name, d,m,y = list(map(str, input().split()))
-    date_str = m+"-"+d+"-"+y
+# from datetime import datetime
+# # n = int(input())
+# # li = {}
+# # for i in range(n):
+# #     Name, d,m,y = list(map(str, input().split()))
+# #     date_str = m+"-"+d+"-"+y
+# #
+# #     date_object = datetime.strptime(date_str, '%m-%d-%Y').date()
+# #     new = {Name : date_object}
+# #     li.update(new)
+# #
+# # sorted_tuples = sorted(li.items(), key=lambda item: item[1])
+# # print(sorted_tuples[len(li)-1][0])
+# # print(sorted_tuples[0][0])
 
-    date_object = datetime.strptime(date_str, '%m-%d-%Y').date()
-    new = {Name : date_object}
-    li.update(new)
+#
+# def pushleft(li,v,n):
+#     if len(li)==n:
+#         print("The queue is full")
+#     elif len(li) < n:
+#         li.insert(0,v)
+#         print("Pushed in left: %s"%v)
+#     else:
+#         print("The queue is empty")
+#
+#     return li
+#
+# def pushright(li,v,n):
+#     if len(li)==n:
+#         print("The queue is full")
+#     elif len(li)<n:
+#         li.append(v)
+#         print("Pushed in right: %s" % v)
+#     else:
+#         print("The queue is empty")
+#
+#     return li
+#
+# def popleft(li):
+#     li.pop()
+#     print("Popped from left: %s"%v)
+#     return li
 
-sorted_tuples = sorted(li.items(), key=lambda item: item[1])
-print(sorted_tuples[len(li)-1][0])
-print(sorted_tuples[0][0])
+# def popright(li):
+#     li.pop(0)
+#     print("Popped from right: %s"%v)
+#     return li
+#
+#
+#
+#
+# t = int(input())
+# for i in range(t):
+#     n, m = list(map(int, input().split()))
+#     li = [][:n]
+#     print("Case %d:"%t)
+#     for j in range(m):
+#         s = input()
+#         if " " in s:
+#             cmd, v = s.split()
+#         else:
+#             cmd = s
+#
+#
+#         if cmd == "pushLeft":
+#             li = pushleft(li, v,n)
+#         elif cmd == "pushRight":
+#             li = pushright(li, v,n)
+#         elif cmd == "popLeft":
+#             li = popleft(li)
+#         elif cmd == "popRight":
+#             li = popright(li)
+#
+
+
+t = int(input())
+input()
+for _ in range(t):
+    n = int(input())
+    input()
+    l = []
+    for i in range(n):
+        a,b = list(map(int, input().split()))
+        if i<n-1:
+            input()
+        l.append([a,b])
+
+    for i in range(len(l)-1):
+        for j in range(0, len(l)-1):
+            if ((l[j][0]>l[j+1][0]) or ((l[j][0] == l[j+1][0]) and (l[j][1] < l[j+1][1]))):
+                l[j], l[j+1] = l[j+1], l[j]
+
+    for i in l:
+        print("%d %d"%(i[0], i[1]))
+        print()
