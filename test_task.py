@@ -226,64 +226,6 @@
 # # print(sorted_tuples[len(li)-1][0])
 # # print(sorted_tuples[0][0])
 
-#
-# def pushleft(li,v,n):
-#     if len(li)==n:
-#         print("The queue is full")
-#     elif len(li) < n:
-#         li.insert(0,v)
-#         print("Pushed in left: %s"%v)
-#     else:
-#         print("The queue is empty")
-#
-#     return li
-#
-# def pushright(li,v,n):
-#     if len(li)==n:
-#         print("The queue is full")
-#     elif len(li)<n:
-#         li.append(v)
-#         print("Pushed in right: %s" % v)
-#     else:
-#         print("The queue is empty")
-#
-#     return li
-#
-# def popleft(li):
-#     li.pop()
-#     print("Popped from left: %s"%v)
-#     return li
-
-# def popright(li):
-#     li.pop(0)
-#     print("Popped from right: %s"%v)
-#     return li
-#
-#
-#
-#
-# t = int(input())
-# for i in range(t):
-#     n, m = list(map(int, input().split()))
-#     li = [][:n]
-#     print("Case %d:"%t)
-#     for j in range(m):
-#         s = input()
-#         if " " in s:
-#             cmd, v = s.split()
-#         else:
-#             cmd = s
-#
-#
-#         if cmd == "pushLeft":
-#             li = pushleft(li, v,n)
-#         elif cmd == "pushRight":
-#             li = pushright(li, v,n)
-#         elif cmd == "popLeft":
-#             li = popleft(li)
-#         elif cmd == "popRight":
-#             li = popright(li)
-#
 
 
 # t = int(input())
@@ -348,12 +290,81 @@
 #
 # print(c)
 
-n = int(input())
-s = set(map(int,input().split()))
+# n = int(input())
+# s = set(map(int,input().split()))
+#
+# s = sorted(s)
+#
+# if len(s)>=2:
+#     print(s[1])
+# else:
+#     print("NO")
 
-s = sorted(s)
 
-if len(s)>=2:
-    print(s[1])
-else:
-    print("NO")
+def pushleft(li,v,n):
+    if len(li)==n:
+        print("The queue is full")
+    elif len(li) < n:
+        li.insert(0,v)
+        print("Pushed in left: %s"%v)
+    else:
+        print("The queue is empty")
+
+    return li
+
+def pushright(li,v,n):
+    if len(li)==n:
+        print("The queue is full")
+    elif len(li)<n:
+        li.append(v)
+        print("Pushed in right: %s" % v)
+    else:
+        print("The queue is empty")
+
+    return li
+
+def popleft(li, n):
+    if len(li)>0:
+        item  = li.pop(0)
+        print("Popped from left: %s"%item)
+    elif len(li)==n:
+        print("The queue is full")
+    elif len(li)==0:
+        print("The queue is empty")
+    return li
+
+def popright(li, n):
+    if len(li)>0:
+        item = li.pop()
+        print("Popped from right: %s"%item)
+    elif len(li)==n:
+        print("The queue is full")
+    elif len(li)==0:
+        print("The queue is empty")
+    return li
+
+
+
+
+t = int(input())
+for i in range(t):
+    n, m = list(map(int, input().split()))
+    li = [][:n]
+    print("Case %d:" % (i + 1))
+    for j in range(m):
+        s = input()
+        if not(s == "popLeft" or s=="popRight"):
+            cmd, v = s.split()
+        else:
+            cmd = s
+
+
+        if cmd == "pushLeft":
+            li = pushleft(li, v,n)
+        elif cmd == "pushRight":
+            li = pushright(li, v,n)
+        elif cmd == "popLeft":
+            li = popleft(li, n)
+        elif cmd == "popRight":
+            li = popright(li, n)
+
