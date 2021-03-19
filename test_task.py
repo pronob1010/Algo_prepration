@@ -286,23 +286,74 @@
 #
 
 
-t = int(input())
-input()
-for _ in range(t):
-    n = int(input())
-    input()
-    l = []
-    for i in range(n):
-        a,b = list(map(int, input().split()))
-        if i<n-1:
-            input()
-        l.append([a,b])
+# t = int(input())
+# input()
+# for _ in range(t):
+#     n = int(input())
+#     input()
+#     l = []
+#     for i in range(n):
+#         a,b = list(map(int, input().split()))
+#         if i<n-1:
+#             input()
+#         l.append([a,b])
+#
+#     for i in range(len(l)-1):
+#         for j in range(0, len(l)-1):
+#             if ((l[j][0]>l[j+1][0]) or ((l[j][0] == l[j+1][0]) and (l[j][1] < l[j+1][1]))):
+#                 l[j], l[j+1] = l[j+1], l[j]
+#
+#
+#
+#     for i in l:
+#         print("%d %d"%(i[0], i[1]))
+#         print()
 
-    for i in range(len(l)-1):
-        for j in range(0, len(l)-1):
-            if ((l[j][0]>l[j+1][0]) or ((l[j][0] == l[j+1][0]) and (l[j][1] < l[j+1][1]))):
-                l[j], l[j+1] = l[j+1], l[j]
 
-    for i in l:
-        print("%d %d"%(i[0], i[1]))
-        print()
+
+
+#
+# dic={}
+# f = 0
+# while True:
+#     try:
+#
+#         s = input()
+#         if s!="" and f == 0:
+#             key, value = list(map(str,s.split()))
+#             dic.update({key:value})
+#         elif s =="":
+#             f = 1
+#             continue
+#         else:
+#             for key, val in dic.items():
+#                 if val == s:
+#                     print(key)
+#                     break
+#             else:
+#                 print("eh")
+#
+#
+#     except EOFError:
+#         break
+#
+
+# a, b = list(map(int,input().split()))
+# r = list(map(int,input().split()))[:a]
+# c=0
+# che = r[b-1]
+# for i in range(len(r)):
+#     if 0<r[i] and r[i]>=che:
+#         c+=1
+#
+# print(c)
+
+n = int(input())
+s = set(map(int,input().split()))
+
+s = sorted(s)
+
+if len(s)>=2:
+    print(s[1])
+else:
+    print("NO")
